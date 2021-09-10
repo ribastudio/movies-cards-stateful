@@ -3,21 +3,24 @@ import React, { Component } from 'react';
 
 class SearchBar extends Component {
   // constructor() {
-  //   super()
+  //   super();
 
-  //   this.state {
-  //     //
-  //   }
+  // this.state = {
+  //   searchText: "",
+  //   bookmarkedOnly: false,
+  //   selectedGenre: '',
+  //   movies: '',
+  // };
   // }
 
   render() {
     return (
       <div>
-        <section>
+        <section className="form-body">
           <form action="" data-testid="search-bar-form">
             <label htmlFor="searchText">
-              <input type="text" name="searchText" data-testid="text-input"/>
               Inclui o texto:
+              <input type="text" name="searchText" data-testid="text-input" />
             </label>
             <label htmlFor="chkFavorite">
               <input type="checkbox" name="chkFavorite" id="" />
