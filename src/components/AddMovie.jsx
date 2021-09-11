@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 
 class AddMovie extends Component {
-  constructor() {
-    super();
-    this.handleInputChange.bind = this.handleInputChange(this);
+  // constructor() {
+  //   super();
+  //   this.handleInputChange.bind = this.handleInputChange(this);
 
-    this.state = {
-      titleInput: 'ds',
-      subtitleInput: '',
+  //   this.state = {
+  //     titleInput: 'ds',
+  //     subtitleInput: '',
 
-    };
-  }
+  //   };
+  // }
 
-  handleInputChange() {
-    this.setState({
-      titleInput: ' ',
-    });
-  }
+  // handleInputChange() {
+  //   this.setState({
+  //     titleInput: ' ',
+  //   });
+  // }
 
   render() {
     const { titleInput, subtitleInput } = this.state;
