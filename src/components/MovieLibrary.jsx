@@ -38,9 +38,6 @@ class MovieLibrary extends Component {
 }
 
 MovieLibrary.propTypes = {
-  searchText: PropTypes.string.isRequired,
-  bookmarkedOnly: PropTypes.bool.isRequired,
-  selectedGenre: PropTypes.string.isRequired,
   movies: PropTypes.arrayOf(
     PropTypes.object,
   ).isRequired,

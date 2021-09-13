@@ -4,7 +4,7 @@ import Form from './Form';
 class AddMovie extends Component {
   constructor() {
     super();
-    // this.handleChange = this.handleChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
 
     this.state = {
       title: '',
@@ -17,7 +17,7 @@ class AddMovie extends Component {
   }
 
   handleChange() {
-    
+    //
   }
 
   render() {

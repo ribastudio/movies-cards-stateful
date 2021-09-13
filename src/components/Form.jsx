@@ -8,8 +8,9 @@ class Form extends Component {
   render() {
     const { title, subtitle, imagePath, storyline, rating, genre } = this.props;
     const arrayProps = [title, subtitle, imagePath, rating];
+    // criação do Array foi em conjunto com o Gustavo Sant'Anna durante uma call, além da reestruturação e organização do projeto como um todo, onde as props estavam no lugar errado e as declarações estavam em conflito. Ele me reexplicou a lógica de declaração da props e me orientou para a reorganização da lógica do projeto.
     return (
-      <form>
+      <form data-testid="add-movie-form">
         {formData.map((eachValue, i) => (<LabelAndInput
           key={ i }
           data={ eachValue }
