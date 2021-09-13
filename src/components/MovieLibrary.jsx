@@ -5,19 +5,23 @@ import AddMovie from './AddMovie';
 import SearchBar from './SearchBar';
 
 class MovieLibrary extends Component {
-  constructor() {
+  constructor(props) {
     super();
+
+    const { movies } = props;
 
     this.state = {
       searchText: '',
       bookmarkedOnly: false,
       selectedGenre: '',
-      movies: { movies },
+      movies,
     };
   }
 
+  // Ver a documentação do React constructor, para ver onde passa a props. Dica do Gustavo Santanna
+
   render() {
-    const { searchText, bookmarkedOnly, selectedGenre, movies } = this.props;
+    const { searchText, bookmarkedOnly, selectedGenre, movies } = this.state;
     return (
       <div>
         <h2 className="gallery-title"> My awesome movie library </h2>

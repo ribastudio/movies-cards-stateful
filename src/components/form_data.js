@@ -1,12 +1,11 @@
-const formInputs = [
+const formData = [
   {
     labelDataTestid: 'title-input-label',
     labelHtmlFor: 'title-input',
     labelValue: 'Título',
     inputName: 'titleInput',
     dataTestid: 'title-input',
-    type: 'text',
-    value: { title },
+    inputType: 'text',
   },
   {
     labelDataTestid: 'subtitle-input-label',
@@ -14,8 +13,7 @@ const formInputs = [
     labelValue: 'Subtítulo',
     inputName: 'subtitleInput',
     dataTestid: 'subtitle-input',
-    type: 'text',
-    value: { title },
+    inputType: 'text',
   },
   {
     labelDataTestid: 'image-input-label',
@@ -23,16 +21,16 @@ const formInputs = [
     labelValue: 'Caminho da imagem',
     inputName: 'image-input',
     dataTestid: 'image-input',
-    type: 'text',
-    value: { imagePath },
+    inputType: 'text',
   },
   {
-    labelDataTestid: 'storyline-input-label',
-    labelHtmlFor: 'storyline-input',
-    labelValue: 'Sinopse',
-    inputName: 'storyline-input',
-    dataTestid: 'storyline-input',
-    type: 'text',
-    value: { storyline },
+    labelDataTestid: 'rating-input-label',
+    labelHtmlFor: 'rating-input',
+    labelValue: 'Avaliação',
+    inputName: 'rating-input',
+    dataTestid: 'rating-input',
+    inputType: 'number',
   },
 ];
+
+export default formData;

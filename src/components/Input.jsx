@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export class Input extends Component {
+class Input extends Component {
   render() {
+    const { inputName, dataTestid, type, inputType } = this.props;
     return (
-      <label data-testid="title-input-label" htmlFor="title-input">
-        Título
-        <input
-          name="titleInput"
-          data-testid="title-input"
-          type="text"
-          value={ title }
-          onChange={ console.log('oi') }
-        />
-      </label>
+      <input
+        name={ inputName }
+        data-testid={ dataTestid }
+        type={ type }
+        value={ inputType }
+        onChange={ console.log('oi') }
+      />
     );
   }
 }
 
+Input.propTypes = PropTypes.shape({
+  inputName: PropTypes.string,
+  dataTestid: PropTypes.string,
+  type: PropTypes.string,
+  inputType: PropTypes.string,
+}).isRequired;
 export default Input;

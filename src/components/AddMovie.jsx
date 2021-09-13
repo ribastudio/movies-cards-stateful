@@ -4,7 +4,7 @@ import Form from './Form';
 class AddMovie extends Component {
   constructor() {
     super();
-    // this.handleInputChange.bind = this.handleInputChange(this);
+    // this.handleChange = this.handleChange.bind(this);
 
     this.state = {
       title: '',
@@ -17,14 +17,21 @@ class AddMovie extends Component {
   }
 
   handleChange() {
-    //
+    
   }
 
   render() {
     const { title, subtitle, imagePath, storyline, rating, genre } = this.state;
     return (
       <section className="form-body">
-        <Form />
+        <Form
+          title={ title }
+          subtitle={ subtitle }
+          imagePath={ imagePath }
+          storyline={ storyline }
+          rating={ rating }
+          genre={ genre }
+        />
       </section>
     );
   }
