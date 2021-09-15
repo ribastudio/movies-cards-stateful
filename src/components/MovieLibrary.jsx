@@ -10,6 +10,9 @@ class MovieLibrary extends Component {
 
     const { movies } = props;
 
+    this.onClick = this.onClick.bind(this);
+    this.searchHandleChange = this.searchHandleChange.bind(this);
+
     this.state = {
       searchText: '',
       bookmarkedOnly: false,
@@ -18,6 +21,18 @@ class MovieLibrary extends Component {
     };
   }
 
+  onClick(state) {
+    const { movies } = this.state;
+    this.setState({
+      movies: [...movies, state],
+    });
+  }
+
+  searchHandleChange({ target: { name, value } }) {
+    this.setState({
+      [name]: value,
+    });
+  }
   // Ver a documentação do React constructor, para ver onde passa a props. Dica do Gustavo Santanna
 
   render() {
@@ -29,9 +44,12 @@ class MovieLibrary extends Component {
           searchText={ searchText }
           bookmarkedOnly={ bookmarkedOnly }
           selectedGenre={ selectedGenre }
+          onSearchTextChange={ this.searchHandleChange }
+          onBookmarkedChange={ this.searchHandleChange }
+          onSelectedGenreChange={ this.searchHandleChange }
         />
         <MovieList movies={ movies } />
-        <AddMovie />
+        <AddMovie onClick={ this.onClick } />
       </div>
     );
   }

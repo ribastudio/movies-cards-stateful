@@ -4,7 +4,7 @@ import Input from './Input';
 
 class LabelAndInput extends Component {
   render() {
-    const { value, data: { labelDataTestid, labelHtmlFor, labelValue,
+    const { value, funcParameter, data: { labelDataTestid, labelHtmlFor, labelValue,
       inputName, dataTestid, inputType } } = this.props;
     return (
       <label
@@ -13,19 +13,26 @@ class LabelAndInput extends Component {
       >
         { labelValue }
         <Input
-          inputName={ inputName }
+          name={ inputName }
           dataTestid={ dataTestid }
           type={ inputType }
           value={ value }
+          funcChangingValue={ funcParameter }
         />
       </label>
     );
   }
 }
 
+// documentação do PropTypes https://pt-br.reactjs.org/docs/typechecking-with-proptypes.html
+
 LabelAndInput.propTypes = {
-  value: PropTypes.string.isRequired,
-  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]).isRequired,
+  funcParameter: PropTypes.func.isRequired,
+  data: PropTypes.arrayOf(PropTypes.array).isRequired,
 };
 
 export default LabelAndInput;

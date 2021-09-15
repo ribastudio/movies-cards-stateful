@@ -3,23 +3,24 @@ import PropTypes from 'prop-types';
 
 class Input extends Component {
   render() {
-    const { inputName, dataTestid, type, inputType } = this.props;
+    const { name, dataTestid, type, inputType, funcChangingValue } = this.props;
     return (
       <input
-        name={ inputName }
+        name={ name }
         data-testid={ dataTestid }
         type={ type }
         value={ inputType }
-        onChange={ console.log('oi') }
+        onChange={ funcChangingValue }
       />
     );
   }
 }
 
 Input.propTypes = PropTypes.shape({
-  inputName: PropTypes.string,
+  name: PropTypes.string,
   dataTestid: PropTypes.string,
   type: PropTypes.string,
   inputType: PropTypes.string,
+  funcChangingValue: PropTypes.func,
 }).isRequired;
 export default Input;
