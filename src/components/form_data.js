@@ -23,14 +23,6 @@ const formData = [
     dataTestid: 'image-input',
     inputType: 'text',
   },
-  {
-    labelDataTestid: 'rating-input-label',
-    labelHtmlFor: 'rating-input',
-    labelValue: 'Avaliação',
-    name: 'rating',
-    dataTestid: 'rating-input',
-    inputType: 'number',
-  },
 ];
 
 export default formData;
